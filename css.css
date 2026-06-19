@@ -1,0 +1,301 @@
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #1a202c;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #1a202c;
+    color: #e2e8f0;
+}
+
+body.dark .container {
+    background: #2d3748;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+#datetime {
+    font-size: 1rem;
+    background: #e2e8f0;
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+
+body.dark #datetime {
+    background: #4a5568;
+}
+
+#themeToggle {
+    background: #4a5568;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+body.dark #themeToggle {
+    background: #e2e8f0;
+    color: #1a202c;
+}
+
+/* Timer */
+.timer-section {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #e2e8f0;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+    margin: 10px 0;
+}
+
+.timer-controls button,
+.timer-custom button,
+#setTimerBtn {
+    margin: 5px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 30px;
+    background: #4299e1;
+    color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.timer-controls button:hover,
+#setTimerBtn:hover {
+    background: #3182ce;
+}
+
+#timerStop {
+    background: #e53e3e;
+}
+#timerStop:hover {
+    background: #c53030;
+}
+
+.timer-custom {
+    margin-top: 10px;
+}
+.timer-custom input {
+    width: 70px;
+    padding: 5px 8px;
+    border-radius: 20px;
+    border: 1px solid #cbd5e0;
+    text-align: center;
+}
+
+/* To-Do List */
+.todo-section {
+    margin: 20px 0;
+}
+
+.todo-input-group {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0 15px;
+}
+
+.todo-input-group input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 1px solid #cbd5e0;
+    font-size: 1rem;
+}
+
+.todo-input-group button,
+#addLinkBtn {
+    padding: 10px 25px;
+    background: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.todo-input-group button:hover {
+    background: #38a169;
+}
+
+#todoList {
+    list-style: none;
+}
+
+#todoList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f7fafc;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
+body.dark #todoList li {
+    background: #4a5568;
+}
+
+#todoList li .todo-text {
+    flex: 1;
+    cursor: pointer;
+}
+
+#todoList li .todo-text.done {
+    text-decoration: line-through;
+    color: #a0aec0;
+}
+
+#todoList li .todo-actions button {
+    margin-left: 8px;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.edit-btn {
+    background: #ed8936;
+    color: white;
+}
+.edit-btn:hover {
+    background: #dd6b20;
+}
+
+.delete-btn {
+    background: #fc8181;
+    color: white;
+}
+.delete-btn:hover {
+    background: #e53e3e;
+}
+
+/* Quick Links */
+.links-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #e2e8f0;
+}
+
+.links-input-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0 15px;
+}
+
+.links-input-group input {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 1px solid #cbd5e0;
+}
+
+#addLinkBtn {
+    background: #9f7aea;
+}
+#addLinkBtn:hover {
+    background: #805ad5;
+}
+
+#linkContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.link-item {
+    background: #ebf8ff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body.dark .link-item {
+    background: #4a5568;
+}
+
+.link-item a {
+    color: #2b6cb0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body.dark .link-item a {
+    color: #90cdf4;
+}
+
+.link-item button {
+    background: #fc8181;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.link-item button:hover {
+    background: #e53e3e;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+    .todo-input-group,
+    .links-input-group {
+        flex-direction: column;
+    }
+    .timer-display {
+        font-size: 3rem;
+    }
+}
